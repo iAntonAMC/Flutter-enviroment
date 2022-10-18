@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import '../drawerapp.dart';
-import 'Page1.dart';
-import 'Page2.dart';
+import 'page1.dart';
+import 'page3.dart';
 
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
+class Page2 extends StatelessWidget {
+  const Page2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Asignatura'),
+        title: const Text('Grado y Grupo'),
         backgroundColor: Colors.pink,
       ),
       drawer: Drawer(
@@ -23,8 +23,9 @@ class Page3 extends StatelessWidget {
               child: ListTile(
                 title: Text("Home Page"),
                 trailing: Icon(Icons.home),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const MyApp()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const MyApp()));
                 },
               ),
             ),
@@ -32,8 +33,9 @@ class Page3 extends StatelessWidget {
               child: ListTile(
                 title: Text("Nombre Alumno"),
                 trailing: Icon(Icons.account_box),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const Page1()));
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Page1()));
                 },
               ),
             ),
@@ -41,8 +43,8 @@ class Page3 extends StatelessWidget {
               child: ListTile(
                 title: Text("Cuatrimestre"),
                 trailing: Icon(Icons.account_balance_sharp),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const Page2()));
+                onTap: () {
+                  Navigator.pop(context);
                 },
               ),
             ),
@@ -50,8 +52,9 @@ class Page3 extends StatelessWidget {
               child: ListTile(
                 title: Text("Asignatura"),
                 trailing: Icon(Icons.ad_units_outlined),
-                onTap: (){
-                  Navigator.pop(context);
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Page3()));
                 },
               ),
             ),
@@ -59,7 +62,10 @@ class Page3 extends StatelessWidget {
         ),
       ),
       body: const Center(
-        child: Text("Diseño de Apps", style: TextStyle(fontSize: 25),),
+        child: Text(
+          "TI41",
+          style: TextStyle(fontSize: 25),
+        ),
       ),
     );
   }

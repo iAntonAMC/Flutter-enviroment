@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'drawer_pages/Page1.dart';
-import 'drawer_pages/Page2.dart';
-import 'drawer_pages/Page3.dart';
+import 'drawer_pages/page1.dart';
+import 'drawer_pages/page2.dart';
+import 'drawer_pages/page3.dart';
 
 void main() {
   runApp(const MyApp());

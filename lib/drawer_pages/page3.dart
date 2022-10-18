@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import '../drawerapp.dart';
-import 'Page2.dart';
-import 'Page3.dart';
+import 'page1.dart';
+import 'page2.dart';
 
-class Page1 extends StatelessWidget {
-  const Page1({Key? key}) : super(key: key);
+class Page3 extends StatelessWidget {
+  const Page3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nombre'),
+        title: const Text('Asignatura'),
         backgroundColor: Colors.pink,
       ),
       drawer: Drawer(
         child: ListView(
           children: [
             const UserAccountsDrawerHeader(
-                accountName: Text("Drawer Aplication"),
+                accountName: Text("Drawer Header"),
                 accountEmail: Text("1721110069@utectulancingo.edu.mx")),
             Card(
               child: ListTile(
@@ -33,7 +33,7 @@ class Page1 extends StatelessWidget {
                 title: Text("Nombre Alumno"),
                 trailing: Icon(Icons.account_box),
                 onTap: (){
-                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const Page1()));
                 },
               ),
             ),
@@ -51,7 +51,7 @@ class Page1 extends StatelessWidget {
                 title: Text("Asignatura"),
                 trailing: Icon(Icons.ad_units_outlined),
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const Page3()));
+                  Navigator.pop(context);
                 },
               ),
             ),
@@ -59,7 +59,7 @@ class Page1 extends StatelessWidget {
         ),
       ),
       body: const Center(
-        child: Text("Cristian Daniel", style: TextStyle(fontSize: 25),),
+        child: Text("Diseño de Apps", style: TextStyle(fontSize: 25),),
       ),
     );
   }
